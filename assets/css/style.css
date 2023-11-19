@@ -1,6 +1,7 @@
 * {
 	 margin: 0;
 	 padding: 0;
+	 font-family: 'Roboto';
 }
 /* Header */
  header {
@@ -12,15 +13,70 @@
  header .logo {
 	 display: flex;
 	 justify-content: center;
-	 justify-items: center;
-	 height: 50%;
-	 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	 align-items: center;
+	 height: 55%;
+	 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 }
  header .logo h1 {
 	 font-family: 'Shrikhand', sans-serif;
 	 font-size: 30px;
 }
  header .searchBar {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
 	 background-color: #eaeaea;
+	 height: 45%;
+}
+ header .searchBar form {
+	 display: flex;
+	 flex-direction: row;
+	 gap: 17px;
+}
+ header .searchBar input {
+	 border: none;
+	 width: 110px;
+	 background-color: #eaeaea;
+	 color: black;
+	 font-size: 16px;
+}
+ header .searchBar input::placeholder {
+	 color: black;
+	 font-size: 16px;
+}
+ main {
+	 background-color: #f6f6f6;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+}
+ main .infoGroup {
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 gap: 15px;
+	 padding: 30px 0;
+	 align-items: center;
+}
+ main .infoGroup .infoGroup__infoText {
+	 text-align: center;
+}
+ main .infoGroup .infoGroup__title {
+	 font-size: 24px;
+	 font-weight: 700;
+}
+ main .infoGroup .infoGroup__subtitle {
+	 font-size: 18px;
+	 font-weight: 300;
+}
+ main .infoGroup .infoGroup__btn {
+	 color: white;
+	 background: linear-gradient(#ff79da, #9356dc);
+	 width: 218px;
+	 height: 50px;
+	 border-radius: 25px;
+	 border: none;
+	 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+	 margin: 20px 0;
 }
  

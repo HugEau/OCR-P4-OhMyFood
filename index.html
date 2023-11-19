@@ -5,22 +5,47 @@
         <title>OhMyFood</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <header>
             <div class="logo">
-                <h1>OhMyFood</h1>
+                <h1>ohmyfood</h1>
             </div>
             <div class="searchBar">
-                
+                <form method="post" action="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <label for="SearchBar">
+                        <input type="text" id="SearchBar" name="SearchBar" placeholder="Paris, Belleville">
+                    </label>    
+                </form>
             </div>
         </header>
         
         <main>
+            <div class="infoGroup">
+                <h1 class="infoGroup__infoText infoGroup__title">Réservez le menu qui vous convient</h1>
+                <h2 class="infoGroup__infoText infoGroup__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
+                <button href="#restaurants" class="infoGroup__btn">Explorer nos restaurants</button>
+            </div>
             
-            
+            <div class="howTo">
+                <h1 class="howTo__title">Fonctionnement</h1>
+                <article class="howTo__article">
+                    <h3 class="howTo__article--h3">Choisissez un restaurant</h3>  
+                </article>
+                
+                <article class="howTo__article">
+                    <h3 class="howTo__article--h3">Composez votre menu</h3>
+                </article>
+                
+                <article class="howTo__article">
+                    <h3 class="howTo__article--h3">Dégustez au restaurant</h3>
+                </article>
+
+            </div>
             
         </main>
     
