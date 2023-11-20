@@ -72,11 +72,90 @@
  main .infoGroup .infoGroup__btn {
 	 color: white;
 	 background: linear-gradient(#ff79da, #9356dc);
-	 width: 218px;
+	 width: 58%;
 	 height: 50px;
 	 border-radius: 25px;
 	 border: none;
 	 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 	 margin: 20px 0;
+	 font-size: 16px;
+}
+ main .howTo {
+	 background-color: white;
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 padding: 48px 0 68px;
+}
+ main .howTo__title {
+	 font-size: 24px;
+	 font-weight: 700;
+	 padding-left: 20px;
+}
+ main .howTo .howTo__articleContainer {
+	 display: flex;
+	 flex-direction: column;
+	 align-content: flex-start;
+	 align-items: center;
+	 gap: 25px;
+	 margin-top: 26px;
+}
+ main .howTo .howTo__articleContainer .howTo__article {
+	 background-color: #f6f6f6;
+	 display: flex;
+	 flex-direction: row;
+	 width: 85%;
+	 height: 72px;
+	 border-radius: 20px;
+	 align-items: center;
+	 gap: 20px;
+	 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+ main .howTo .howTo__articleContainer .howTo__article .howTo__article--number {
+	 height: 20px;
+	 width: 20px;
+	 border-radius: 100%;
+	 background-color: #9356dc;
+	 text-align: center;
+	 margin-left: -10px;
+	 color: white;
+}
+ main .howTo .howTo__articleContainer .howTo__article .howTo__article--icon {
+	 color: #7e7e7e;
+}
+ main .howTo .howTo__articleContainer .howTo__article:hover .howTo__article--icon {
+	 color: #9356dc;
+}
+ main .restaurants {
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 padding: 54px 0 66px;
+}
+ main .restaurants__title {
+	 font-size: 24px;
+	 font-weight: 700;
+	 padding-left: 20px;
+}
+ main .restaurants .restaurant__articleContainer {
+	 display: flex;
+	 flex-direction: column;
+	 align-content: flex-start;
+	 align-items: center;
+	 gap: 25px;
+	 margin-top: 26px;
+}
+ main .restaurants .restaurant__articleContainer .restaurant__article {
+	 background-color: white;
+	 display: flex;
+	 flex-direction: column;
+	 width: 91%;
+	 height: 250px;
+	 border-radius: 15px;
+	 align-items: center;
+	 gap: 18px;
+}
+ main .restaurants .restaurant__articleContainer .restaurant__article--img {
+	 object-fit: cover;
 }
  
