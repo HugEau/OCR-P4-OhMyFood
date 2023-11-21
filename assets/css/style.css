@@ -50,7 +50,7 @@
 	 flex-direction: column;
 	 align-items: center;
 }
- main .infoGroup {
+ .infoGroup {
 	 display: flex;
 	 flex-direction: column;
 	 width: 100%;
@@ -58,20 +58,25 @@
 	 padding: 30px 0;
 	 align-items: center;
 }
- main .infoGroup .infoGroup__infoText {
+ .infoGroup__infoText {
 	 text-align: center;
 }
- main .infoGroup .infoGroup__title {
+ .infoGroup__title {
 	 font-size: 24px;
 	 font-weight: 700;
 }
- main .infoGroup .infoGroup__subtitle {
+ .infoGroup__subtitle {
 	 font-size: 18px;
 	 font-weight: 300;
 }
- main .infoGroup .infoGroup__btn {
+ .infoGroup__btn {
+	 display: flex;
+	 align-items: center;
 	 color: white;
 	 background: linear-gradient(#ff79da, #9356dc);
+	 text-decoration: none;
+	 text-align: center;
+	 justify-content: center;
 	 width: 58%;
 	 height: 50px;
 	 border-radius: 25px;
@@ -80,19 +85,19 @@
 	 margin: 20px 0;
 	 font-size: 16px;
 }
- main .howTo {
+ .howTo {
 	 background-color: white;
 	 display: flex;
 	 flex-direction: column;
 	 width: 100%;
 	 padding: 48px 0 68px;
 }
- main .howTo__title {
+ .howTo__title {
 	 font-size: 24px;
 	 font-weight: 700;
 	 padding-left: 20px;
 }
- main .howTo .howTo__articleContainer {
+ .howTo__articleContainer {
 	 display: flex;
 	 flex-direction: column;
 	 align-content: flex-start;
@@ -100,7 +105,7 @@
 	 gap: 25px;
 	 margin-top: 26px;
 }
- main .howTo .howTo__articleContainer .howTo__article {
+ .howTo__articleContainer .howTo__article {
 	 background-color: #f6f6f6;
 	 display: flex;
 	 flex-direction: row;
@@ -111,7 +116,7 @@
 	 gap: 20px;
 	 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
- main .howTo .howTo__articleContainer .howTo__article .howTo__article--number {
+ .howTo__articleContainer .howTo__article--number {
 	 height: 20px;
 	 width: 20px;
 	 border-radius: 100%;
@@ -120,42 +125,122 @@
 	 margin-left: -10px;
 	 color: white;
 }
- main .howTo .howTo__articleContainer .howTo__article .howTo__article--icon {
+ .howTo__articleContainer .howTo__article--icon {
 	 color: #7e7e7e;
 }
- main .howTo .howTo__articleContainer .howTo__article:hover .howTo__article--icon {
+ .howTo__articleContainer .howTo__article:hover .howTo__article--icon {
 	 color: #9356dc;
 }
- main .restaurants {
+ .restaurants {
 	 display: flex;
 	 flex-direction: column;
 	 width: 100%;
 	 padding: 54px 0 66px;
 }
- main .restaurants__title {
+ .restaurants__title {
 	 font-size: 24px;
 	 font-weight: 700;
 	 padding-left: 20px;
 }
- main .restaurants .restaurant__articleContainer {
+ .restaurants__articleContainer {
 	 display: flex;
 	 flex-direction: column;
 	 align-content: flex-start;
 	 align-items: center;
 	 gap: 25px;
 	 margin-top: 26px;
+	 width: 100%;
 }
- main .restaurants .restaurant__articleContainer .restaurant__article {
+ .restaurants__articleContainer .restaurants__article {
 	 background-color: white;
+	 color: black;
+	 text-decoration: none;
 	 display: flex;
 	 flex-direction: column;
 	 width: 91%;
 	 height: 250px;
 	 border-radius: 15px;
-	 align-items: center;
-	 gap: 18px;
+	 align-content: flex-start;
 }
- main .restaurants .restaurant__articleContainer .restaurant__article--img {
+ .restaurants__articleContainer .restaurants__article--img {
 	 object-fit: cover;
+	 height: 69%;
+	 width: 100%;
+	 border-radius: 15px 15px 0 0;
+}
+ .restaurants__articleContainer .restaurants__article--badgeContainer {
+	 display: flex;
+	 position: absolute;
+	 align-items: flex-end;
+	 width: inherit;
+	 height: 50px;
+	 justify-content: flex-end;
+	 padding-right: 12px;
+}
+ .restaurants__articleContainer .restaurants__article--badgeContainer .restaurants__article--newBadge {
+	 display: flex;
+	 height: 30px;
+	 width: 80px;
+	 background-color: #99e2d0;
+	 color: #278870;
+	 font-size: 14px;
+	 font-weight: 500;
+	 position: absolute;
+	 align-items: center;
+	 justify-content: center;
+	 border-radius: 3px;
+     margin-right: 12px;
+}
+ .restaurants__articleContainer .restaurants__article--content {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+	 padding: 16px 13px 12px;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--text {
+	 display: flex;
+	 flex-direction: column;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--text .restaurant__article--title {
+	 font-size: 18px;
+	 font-weight: 700;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--text .restaurant__article--subtitle {
+	 font-size: 17px;
+	 font-weight: 300;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like {
+	 display: flex;
+	 align-self: center;
+	 padding-right: 5px;
+	 width: auto;
+	 height: auto;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-regular, .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-solid {
+	 color: #9356dc;
+	 background-color: white;
+	 display: block;
+	 transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-regular {
+	 color: black;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-solid {
+	 opacity: 0;
+	 transform: scale(0);
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover {
+	 font-weight: bold;
+	 color: #9356dc;
+	 cursor: pointer;
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover .fa-regular {
+	 display: none;
+	 opacity: 0;
+	 transform: scale(0);
+}
+ .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover .fa-solid {
+	 opacity: 1;
+	 transform: scale(1);
 }
  
