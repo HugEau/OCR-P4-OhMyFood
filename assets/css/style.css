@@ -21,30 +21,6 @@
 	 font-family: 'Shrikhand', sans-serif;
 	 font-size: 30px;
 }
-/* SearchBar */
- .searchBar {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 background-color: #eaeaea;
-	 height: 45%;
-}
- .searchBar form {
-	 display: flex;
-	 flex-direction: row;
-	 gap: 17px;
-}
- .searchBar input {
-	 border: none;
-	 width: 110px;
-	 background-color: #eaeaea;
-	 color: black;
-	 font-size: 16px;
-}
- .searchBar input::placeholder {
-	 color: black;
-	 font-size: 16px;
-}
 /* Main */
  main {
 	 background-color: #f6f6f6;
@@ -52,210 +28,43 @@
 	 flex-direction: column;
 	 align-items: center;
 }
-/* InfoGroup */
- .infoGroup {
-	 display: flex;
-	 flex-direction: column;
-	 width: 100%;
-	 gap: 15px;
-	 padding: 30px 0;
-	 align-items: center;
-}
- .infoGroup__infoText {
-	 text-align: center;
-}
- .infoGroup__title {
-	 font-size: 24px;
-	 font-weight: 700;
-}
- .infoGroup__subtitle {
-	 font-size: 18px;
-	 font-weight: 300;
-}
- .infoGroup__btn {
+ .btn {
 	 display: flex;
 	 align-items: center;
 	 color: white;
-	 background: linear-gradient(#ff79da, #9356dc);
 	 text-decoration: none;
 	 text-align: center;
 	 justify-content: center;
-	 width: 58%;
 	 height: 50px;
 	 border-radius: 25px;
 	 border: none;
 	 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 	 margin: 20px 0;
 	 font-size: 16px;
+     background: linear-gradient(#ff79da, #9356dc);
 }
-/* How To */
- .howTo {
-	 background-color: white;
-	 display: flex;
-	 flex-direction: column;
-	 width: 100%;
-	 padding: 48px 0 68px;
+.btn:hover {
+    animation: btnAnimation 0.2s ease-in-out forwards;
 }
- .howTo__container {
-	/* How To cards */
+
+@keyframes btnAnimation {
+    0% {
+        background: linear-gradient(#ff79da, #9356dc);
+    }
+    25% {
+        background: linear-gradient(#ff79da 5%, #9356dc 100%);
+    }
+    50% {
+        background: linear-gradient(#ff79da 15%, #9356dc 100%);
+    }
+    75% {
+        background: linear-gradient(#ff79da 20%, #9356dc 100%);
+    }
+    100% {
+        background: linear-gradient(#ff79da 25%, #9356dc 100%);
+    }
 }
- .howTo__containerTitle {
-	 font-size: 24px;
-	 font-weight: 700;
-	 padding-left: 20px;
-}
- .howTo__containerArticleContainer {
-	 display: flex;
-	 flex-direction: column;
-	 align-content: flex-start;
-	 align-items: center;
-	 gap: 25px;
-	 margin-top: 26px;
-}
- .howTo__containerArticleContainer .howTo__article {
-	 background-color: #f6f6f6;
-	 display: flex;
-	 flex-direction: row;
-	 width: 85%;
-	 height: 72px;
-	 border-radius: 20px;
-	 align-items: center;
-	 gap: 20px;
-	 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-	/* How To steps */
-	/* How To icons */
-}
- .howTo__containerArticleContainer .howTo__article--number {
-	 height: 20px;
-	 width: 20px;
-	 border-radius: 100%;
-	 background-color: #9356dc;
-	 text-align: center;
-	 margin-left: -10px;
-	 color: white;
-}
- .howTo__containerArticleContainer .howTo__article--icon {
-	 color: #7e7e7e;
-}
- .howTo__containerArticleContainer .howTo__article:hover .howTo__article--icon {
-	 color: #9356dc;
-}
-/* Restaurants Part */
- .restaurants {
-	 display: flex;
-	 flex-direction: column;
-	 width: 100%;
-	 padding: 54px 0 66px;
-	/* Restaurant card */
-}
- .restaurants__title {
-	 font-size: 24px;
-	 font-weight: 700;
-	 padding-left: 20px;
-}
- .restaurants__articleContainer {
-	 display: flex;
-	 flex-direction: column;
-	 align-content: flex-start;
-	 align-items: center;
-	 gap: 25px;
-	 margin-top: 26px;
-	 width: 100%;
-}
- .restaurants__articleContainer .restaurants__article {
-	 background-color: white;
-	 color: black;
-	 text-decoration: none;
-	 display: flex;
-	 flex-direction: column;
-	 width: 91%;
-	 height: 250px;
-	 border-radius: 15px;
-	 align-content: flex-start;
-	/* Badge New */
-	/* Restaurant informations */
-}
- .restaurants__articleContainer .restaurants__article--img {
-	 object-fit: cover;
-	 height: 69%;
-	 width: 100%;
-	 border-radius: 15px 15px 0 0;
-}
- .restaurants__articleContainer .restaurants__article--badgeContainer {
-	 display: flex;
-	 position: absolute;
-	 align-items: flex-end;
-	 width: inherit;
-	 height: 50px;
-	 justify-content: flex-end;
-}
- .restaurants__articleContainer .restaurants__article--badgeContainer .restaurants__article--newBadge {
-	 display: flex;
-	 height: 30px;
-	 width: 80px;
-	 background-color: #99e2d0;
-	 color: #278870;
-	 font-size: 14px;
-	 font-weight: 500;
-	 position: absolute;
-	 align-items: center;
-	 justify-content: center;
-	 border-radius: 3px;
-	 margin-right: 12px;
-}
- .restaurants__articleContainer .restaurants__article--content {
-	 display: flex;
-	 flex-direction: row;
-	 justify-content: space-between;
-	 padding: 16px 13px 12px;
-	/* Like Button */
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--text {
-	 display: flex;
-	 flex-direction: column;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--text .restaurant__article--title {
-	 font-size: 18px;
-	 font-weight: 700;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--text .restaurant__article--subtitle {
-	 font-size: 17px;
-	 font-weight: 300;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like {
-	 display: flex;
-	 align-self: center;
-	 padding: 23px 0 0 5px;
-	 width: 25px;
-	 height: 25px;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-regular, .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-solid {
-	 position: absolute;
-	 color: #9356dc;
-	 background-color: white;
-	 display: block;
-	 transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-regular {
-	 color: black;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like .fa-solid {
-	 opacity: 0;
-	 transform: scale(0);
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover {
-	 font-weight: bold;
-	 color: #9356dc;
-	 cursor: pointer;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover .fa-regular {
-	 display: none;
-	 opacity: 0;
-}
- .restaurants__articleContainer .restaurants__article--content .restaurant__article--like:hover .fa-solid {
-	 opacity: 1;
-	 transform: scale(1);
-}
+
 /* Footer */
  footer {
 	 background-color: #353535;
@@ -300,61 +109,5 @@
 }
  .footer__list--container li a {
 	 text-decoration: none;
-}
- @media (min-width: 768px) {
-	/* Fixing btn size on Desktop/Tablet */
-	/* Calibrating howto part for Desktop/Tablet */
-	/* Calibrating restaurants articles for Desktop/Tablet */
-	/* Calibrating footer for Desktop/Tablet */
-	 .infoGroup__btn {
-		 width: 218px;
-	}
-	 .howto {
-		 width: 100%;
-		 align-items: center;
-	}
-	 .howto__container {
-		 width: 67%;
-	}
-	 .howto__containerTitle {
-		 display: flex;
-	}
-	 .howto__containerArticleContainer {
-		 flex-direction: row;
-		 gap: 36.5px;
-	}
-	 .restaurants__articleContainer {
-		 flex-direction: row;
-		 flex-wrap: wrap;
-		 justify-content: center;
-		 gap: 0;
-		 grid-row-gap: 50px;
-		 grid-column-gap: 100px;
-	}
-	 .restaurants__articleContainer .restaurants__article {
-		 width: 35%;
-	}
-	 .footer__list {
-		 flex-direction: row-reverse;
-	}
-	 .footer__list--title {
-		 padding: 0;
-	}
-	 .footer__list--container {
-		 flex-direction: row;
-		 justify-content: flex-end;
-		 width: 89%;
-	}
-	 .footer__list--container li {
-		 align-items: center;
-	}
-	 .footer__list--container li .footer__list--liText {
-		 width: 100%;
-		 gap: 0;
-		 padding-right: 15px;
-	}
-	 .footer__list--container li .footer__list--liThiner {
-		 padding-right: 30px;
-	}
 }
  

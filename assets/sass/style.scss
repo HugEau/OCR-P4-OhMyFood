@@ -31,33 +31,6 @@ header {
         font-size: 30px;
     }
 }
-
-/* SearchBar */
-.searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EAEAEA;
-    height: 45%;
-    & form {
-        display: flex;
-        flex-direction: row;
-        gap: 17px;
-    }
-    & input {
-        border: none;
-        width: 110px;
-        background-color: #EAEAEA;
-        color: black;
-        font-size: 16px;
-        
-        &::placeholder {
-            color: black;
-            font-size: 16px;
-        }
-    }
-}
-
 /* Main */
 
 main {
@@ -67,234 +40,40 @@ main {
     align-items: center;
 }
 
-/* InfoGroup */
-
-.infoGroup {
+.btn {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    padding: 30px 0;
     align-items: center;
-    
-    &__infoText {
-        text-align: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin: 20px 0;
+    font-size: 16px;
+    background: linear-gradient(#ff79da, #9356dc);
+    &:hover {
+        animation: btnAnimation 0.2s ease-in-out forwards;
     }
-        
-    &__title {
-        font-size: 24px;
-        font-weight: 700;
-    }
-            
-    &__subtitle {
-        font-size: 18px;
-        font-weight: 300;
-    }
-        
-    &__btn {
-        display: flex;
-        align-items: center;
-        color: white;
-        background: linear-gradient($second-color, $main-color);
-        text-decoration: none;
-        text-align: center;
-        justify-content: center;
-        width: 58%;
-        height: 50px;
-        border-radius: 25px;
-        border: none;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        margin: 20px 0;
-        font-size: 16px;
-    } 
 }
 
-/* How To */
-    
-.howTo {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 48px 0 68px;
-    &__container {
-        &Title {
-            font-size: 24px;
-            font-weight: 700;
-            padding-left: 20px;
-        }
-    /* How To cards */    
-        &ArticleContainer {
-            display: flex;
-            flex-direction: column;
-            align-content: flex-start;
-            align-items: center;
-            gap: 25px;
-            margin-top: 26px;
-            
-            & .howTo__article {
-                background-color: #F6F6F6;
-                display: flex;
-                flex-direction: row;
-                width: 85%;
-                height: 72px;
-                border-radius: 20px;
-                align-items: center;
-                gap: 20px;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-            /* How To steps */    
-                &--number {
-                    height: 20px;
-                    width: 20px;
-                    border-radius: 100%;
-                    background-color: $main-color;
-                    text-align: center;
-                    margin-left: -10px;
-                    color: white;
-                }
-            /* How To icons */    
-                &--icon {
-                    color: $icon-color;
-                    
-                }
-                
-                &:hover .howTo__article--icon {
-                    color: $main-color;
-                    
-                    }
-            }
-        }
-    }        
-}
-
-/* Restaurants Part */
-
-.restaurants {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 54px 0 66px;
-    
-    &__title {
-        font-size: 24px;
-        font-weight: 700;
-        padding-left: 20px;
+@keyframes btnAnimation {
+    0% {
+        background: linear-gradient(#ff79da, #9356dc);
     }
-/* Restaurant card */ 
-    &__articleContainer {
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: center;
-        gap: 25px;
-        margin-top: 26px;
-        width: 100%;
-        & .restaurants__article {
-            background-color: white;
-            color: black;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            width: 91%;
-            height: 250px;
-            border-radius: 15px;
-            align-content: flex-start;
-            
-            &--img {
-                object-fit: cover;
-                height: 69%;
-                width: 100%;
-                border-radius: 15px 15px 0 0;
-            }
-        /* Badge New */
-            &--badgeContainer {
-                display: flex;
-                position: absolute;
-                align-items: flex-end;
-                width: inherit;
-                height: 50px;
-                justify-content: flex-end;
-                
-                & .restaurants__article--newBadge {
-                    display: flex;
-                    height: 30px;
-                    width: 80px;
-                    background-color: $third-color;
-                    color: darken($third-color, 40%);
-                    font-size: 14px;
-                    font-weight: 500;
-                    position: absolute;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 3px;
-                    margin-right: 12px;
-                }
-            }
-         /* Restaurant informations */   
-            &--content {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 16px 13px 12px;
-                
-                & .restaurant__article--text {
-                display: flex;
-                flex-direction: column;
-                
-                    & .restaurant__article--title {
-                        font-size: 18px;
-                        font-weight: 700;
-                    }
-            
-                    & .restaurant__article--subtitle {
-                        font-size: 17px;
-                        font-weight: 300;
-                    }
-                }
-            /* Like Button */                
-                .restaurant__article--like {
-                    display: flex;
-                    align-self: center;
-                    padding: 23px 0 0 5px;
-                    width: 25px;
-                    height: 25px;
-                    
-                    & .fa-regular,
-                    & .fa-solid {
-                        position: absolute;
-                        color: $main-color;
-                        background-color: white;
-                        display: block;
-                        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-                    }
-                    
-                    & .fa-regular {
-                        color: black;
-                    }
-                    
-                    & .fa-solid {
-                        opacity: 0;
-                        transform: scale(0);
-                    }
-                    
-                    &:hover {
-                        font-weight: bold;
-                        color: $main-color;
-                        cursor: pointer;
-                        
-                        & .fa-regular {
-                            display: none;
-                            opacity: 0;
-                        }
-
-                        & .fa-solid {
-                            opacity: 1;
-                            transform: scale(1);
-                        }
-                    }
-                }
-            }
-        }
+    25% {
+        background: linear-gradient(#ff79da 5%, #9356dc 100%);
+    }
+    50% {
+        background: linear-gradient(#ff79da 15%, #9356dc 100%);
+    }
+    75% {
+        background: linear-gradient(#ff79da 20%, #9356dc 100%);
+    }
+    100% {
+        background: linear-gradient(#ff79da 25%, #9356dc 100%);
     }
 }
 
@@ -345,64 +124,5 @@ footer {
                 text-decoration: none;
             }
         } 
-    }
-}
-@media (min-width: 768px) {
- /* Fixing btn size on Desktop/Tablet */   
-    .infoGroup__btn {
-        width: 218px;
-    }
-/* Calibrating howto part for Desktop/Tablet */    
-    .howto {
-        width: 100%;
-        align-items: center;
-        &__container {
-            width: 67%;
-            
-            &Title {
-                display: flex;
-            }
-            &ArticleContainer {
-                flex-direction: row;
-                gap: 36.5px;
-            }
-        }
-    }
-/* Calibrating restaurants articles for Desktop/Tablet */    
-    .restaurants__articleContainer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0;
-        grid-row-gap: 50px;
-        grid-column-gap: 100px;
-    }
-    
-    .restaurants__articleContainer .restaurants__article {
-            width: 35%;
-    }
-
-/* Calibrating footer for Desktop/Tablet */    
-    .footer__list {
-        flex-direction: row-reverse;
-        &--title {
-            padding: 0;
-        }
-        &--container {
-            flex-direction: row;
-            justify-content: flex-end;
-            width: 89%;
-        }
-        &--container li {
-            align-items: center;
-            & .footer__list--liText {
-                width: 100%;
-                gap: 0;
-                padding-right: 15px;
-            }
-            & .footer__list--liThiner {
-                padding-right: 30px;
-            }
-        }
     }
 }

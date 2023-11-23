@@ -1,0 +1,73 @@
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$icon-color: #7E7E7E;
+$primary-font: 'Roboto';
+$special-font: 'Shrikhand', sans-serif;
+
+@media (min-width: 768px) {
+ /* Fixing btn size on Desktop/Tablet */   
+    .infoGroup__btn {
+        width: 218px;
+    }
+/* Calibrating howto part for Desktop/Tablet */    
+    .howto {
+        width: 100%;
+        align-items: center;
+        &__container {
+            width: 67%;
+            
+            &Title {
+                display: flex;
+            }
+            &ArticleContainer {
+                flex-direction: row;
+                gap: 36.5px;
+            }
+        }
+    }
+/* Calibrating restaurants articles for Desktop/Tablet */    
+    .restaurants__articleContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        grid-row-gap: 50px;
+        grid-column-gap: 100px;
+    }
+    
+    .restaurants__articleContainer .restaurants__article {
+            width: 35%;
+    }
+    
+    .menuContainer {
+        width: 64%;
+        &__header {
+            justify-content: center;
+        }
+    }
+
+/* Calibrating footer for Desktop/Tablet */    
+    .footer__list {
+        flex-direction: row-reverse;
+        &--title {
+            padding: 0;
+        }
+        &--container {
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 89%;
+        }
+        &--container li {
+            align-items: center;
+            & .footer__list--liText {
+                width: 100%;
+                gap: 0;
+                padding-right: 15px;
+            }
+            & .footer__list--liThiner {
+                padding-right: 30px;
+            }
+        }
+    }
+}
