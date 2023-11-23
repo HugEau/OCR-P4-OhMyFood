@@ -89,25 +89,25 @@
 	 flex-direction: column;
 	 gap: 5px;
 }
- .footer__list--container li {
+ .footer__list--container .li {
 	 display: flex;
 	 list-style: none;
 	 color: white;
 	 gap: 11px;
 }
- .footer__list--container li .fa-solid {
+ .footer__list--container .li .fa-solid {
 	 width: 11px;
 	 height: 13px;
 }
- .footer__list--container li .footer__list--liText {
+ .footer__list--container .li .footer__list--liText {
 	 color: white;
 	 font-weight: 500;
 	 font-size: 16px;
 }
- .footer__list--container li .footer__list--liThiner {
+ .footer__list--container .li .footer__list--liThiner {
 	 font-weight: 400;
 }
- .footer__list--container li a {
+ .footer__list--container .li a {
 	 text-decoration: none;
 }
  
