@@ -46,17 +46,18 @@
 	 .footer__list--container {
 		 flex-direction: row;
 		 justify-content: flex-end;
-		 width: 89%;
+         align-items: center;
+		 width: 95%;
 	}
-	 .footer__list--container li {
+	 .footer__list--container .li {
 		 align-items: center;
 	}
-	 .footer__list--container li .footer__list--liText {
+	 .footer__list--container .li .footer__list--liText {
 		 width: 100%;
 		 gap: 0;
 		 padding-right: 15px;
 	}
-	 .footer__list--container li .footer__list--liThiner {
+	 .footer__list--container .li .footer__list--liThiner {
 		 padding-right: 30px;
 	}
 }
