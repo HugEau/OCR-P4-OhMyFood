@@ -12,7 +12,7 @@ $special-font: 'Shrikhand', sans-serif;
     background-color: white;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     align-items: center;
     justify-content: center;
     animation: scaleAnimation 0s ease-in 2s forwards;
@@ -37,6 +37,10 @@ $special-font: 'Shrikhand', sans-serif;
     align-items: center;
     background-color: #EAEAEA;
     height: 45%;
+    z-index: 0;
+    & i {
+        color: #353535;
+    }
     & form {
         display: flex;
         flex-direction: row;
@@ -78,6 +82,7 @@ $special-font: 'Shrikhand', sans-serif;
     &__subtitle {
         font-size: 18px;
         font-weight: 300;
+        color: #353535;
     }
         
     &__btn {
@@ -119,6 +124,11 @@ $special-font: 'Shrikhand', sans-serif;
                 gap: 20px;
                 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
             /* How To steps */    
+                
+                &--h3 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
                 &--number {
                     height: 20px;
                     width: 20px;
@@ -214,8 +224,9 @@ $special-font: 'Shrikhand', sans-serif;
                 padding: 16px 13px 12px;
                 
                 & .restaurant__article--text {
-                display: flex;
-                flex-direction: column;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
                 
                     & .restaurant__article--title {
                         font-size: 18px;

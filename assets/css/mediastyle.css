@@ -3,23 +3,31 @@
 	/* Calibrating howto part for Desktop/Tablet */
 	/* Calibrating restaurants articles for Desktop/Tablet */
 	/* Calibrating footer for Desktop/Tablet */
-	 .infoGroup__btn {
+    .logo h1 {
+        font-size: 25px;
+    } 
+    .infoGroup__btn {
 		 width: 218px;
 	}
-	 .howto {
+	 .howTo {
 		 width: 100%;
 		 align-items: center;
 	}
-	 .howto__container {
-		 width: 67%;
+	 .howTo__container {
+		 width: 80%;
 	}
-	 .howto__containerTitle {
+	 .howTo__containerTitle {
 		 display: flex;
+         margin-left: -10px;
+         padding-left: 0;
 	}
-	 .howto__containerArticleContainer {
+	 .howTo__containerArticleContainer {
 		 flex-direction: row;
 		 gap: 36.5px;
 	}
+    .restaurants__title {
+        padding-left: 11%;
+    }
 	 .restaurants__articleContainer {
 		 flex-direction: row;
 		 flex-wrap: wrap;
